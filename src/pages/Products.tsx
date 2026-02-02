@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { ProductSidebar } from "@/components/ProductSidebar";
 import { ProductCard } from "@/components/ProductCard";
 import { MOCK_PRODUCTS } from "@/data/products";
-import type { CategoryId } from "@/constants/categories";
 
 const PER_PAGE = 24;
 
@@ -24,7 +23,7 @@ export function Products() {
       list = list.filter(
         (p) =>
           t(p.nameKey).toLowerCase().includes(lower) ||
-          t(p.descriptionKey).toLowerCase().includes(lower),
+          t(p.descriptionKey).toLowerCase().includes(lower)
       );
     }
     return list;

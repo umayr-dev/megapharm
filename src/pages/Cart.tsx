@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Trash2, Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
-import { cn } from "@/lib/utils";
 
 export function Cart() {
   const { t } = useTranslation();
@@ -98,14 +97,9 @@ export function Cart() {
             <Button asChild variant="outline">
               <Link to="/products">{t("cart.continueShopping")}</Link>
             </Button>
-            <div className="flex items-center gap-4">
-              <span className="text-lg font-semibold text-foreground">
-                {t("cart.subtotal")}: ${total.toFixed(2)}
-              </span>
-              <Button className="bg-mega-navy hover:bg-mega-blue">
-                {t("cart.checkout")}
-              </Button>
-            </div>
+            <Button className="bg-mega-navy hover:bg-mega-blue">
+              {t("cart.checkout")}
+            </Button>
           </div>
         </div>
       )}

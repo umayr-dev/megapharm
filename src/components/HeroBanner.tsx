@@ -45,16 +45,16 @@ export function HeroBanner() {
     (next: number) => {
       if (isTransitioning) return;
       setIsTransitioning(true);
-      setIndex((prev) => (next + slideCount) % slideCount);
+      setIndex(() => (next + slideCount) % slideCount);
       setTimeout(() => setIsTransitioning(false), TRANSITION_MS);
     },
-    [isTransitioning],
+    [isTransitioning, slideCount]
   );
 
   useEffect(() => {
     const id = setInterval(
       () => setIndex((prev) => (prev + 1) % slideCount),
-      SLIDE_DURATION_MS,
+      SLIDE_DURATION_MS
     );
     return () => clearInterval(id);
   }, [slideCount]);
@@ -71,8 +71,8 @@ export function HeroBanner() {
             i === index
               ? "translate-x-0 opacity-100"
               : i < index
-                ? "-translate-x-full opacity-0"
-                : "translate-x-full opacity-0",
+              ? "-translate-x-full opacity-0"
+              : "translate-x-full opacity-0"
           )}
           style={{ transitionProperty: "transform, opacity" }}
         >
@@ -80,7 +80,7 @@ export function HeroBanner() {
             <h1
               className={cn(
                 "text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl",
-                slide.accent === "bg-white" ? "text-white" : "text-mega-navy",
+                slide.accent === "bg-white" ? "text-white" : "text-mega-navy"
               )}
             >
               {slide.headline}
@@ -90,7 +90,7 @@ export function HeroBanner() {
                 "mt-2 text-lg md:text-xl",
                 slide.accent === "bg-white"
                   ? "text-white/90"
-                  : "text-mega-navy/90",
+                  : "text-mega-navy/90"
               )}
             >
               {slide.subheadline}
@@ -104,7 +104,7 @@ export function HeroBanner() {
                   "transition-transform hover:scale-[1.02]",
                   slide.accent === "bg-white"
                     ? "bg-white text-mega-navy hover:bg-white/95"
-                    : "bg-mega-navy hover:bg-mega-blue",
+                    : "bg-mega-navy hover:bg-mega-blue"
                 )}
               >
                 <Link to={slide.to}>{slide.cta}</Link>
@@ -149,9 +149,7 @@ export function HeroBanner() {
             onClick={() => goTo(i)}
             className={cn(
               "h-2 rounded-full transition-all duration-300",
-              i === index
-                ? "w-8 bg-white"
-                : "w-2 bg-white/60 hover:bg-white/80",
+              i === index ? "w-8 bg-white" : "w-2 bg-white/60 hover:bg-white/80"
             )}
             aria-label={`Go to slide ${i + 1}`}
           />
