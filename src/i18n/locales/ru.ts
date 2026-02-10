@@ -6,7 +6,7 @@ export const ru = {
     signIn: "Войти",
     register: "Регистрация",
     search: "Поиск",
-    searchPlaceholder: "Поиск MEGA PHARM",
+    searchPlaceholder: "Поиск",
     cart: "Корзина",
     home: "Дом",
     products: "Продукты",
@@ -15,6 +15,8 @@ export const ru = {
     news: "Новости",
     blog: "Блог",
     contact: "Контакты",
+    more: "Ещё",
+    start: "Старт",
   },
   footer: {
     description:

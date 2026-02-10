@@ -1,21 +1,18 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ChevronDown, Search, ShoppingCart, Menu } from "lucide-react";
+import { Search, ShoppingCart, Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useCart } from "@/contexts/CartContext";
-import { CATEGORY_IDS } from "@/constants/categories";
-import { categoryIdToI18nKey } from "@/constants/categories";
 
 export function Header() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { itemCount } = useCart();
-  const [categoriesOpen, setCategoriesOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [moreOpen, setMoreOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,25 +21,9 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
-      {/* Utility bar */}
-      <div className="flex flex-wrap items-center justify-end gap-x-6 gap-y-1 border-b px-4 py-2 text-sm text-muted-foreground">
-        <Link
-          to="/store-locator"
-          className="hover:text-primary transition-colors"
-        >
-          {t("nav.findInStore")}
-        </Link>
-        <Link to="/login" className="hover:text-primary transition-colors">
-          {t("nav.signIn")}
-        </Link>
-        <Link to="/register" className="hover:text-primary transition-colors">
-          {t("nav.register")}
-        </Link>
-      </div>
-
-      {/* Main nav */}
-      <div className="flex items-center justify-between gap-4 bg-mega-navy px-4 py-3 text-white md:px-6">
+    <header className="sticky top-0 z-50 w-full border-b bg-mega-navy text-white">
+      {/* Single-row main nav */}
+      <div className="flex items-center justify-between gap-6 px-4 py-4 md:px-8">
         <Link to="/" className="flex shrink-0 items-center gap-2">
           <img
             src="/logo.png"
@@ -52,43 +33,27 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {/* Categories dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setCategoriesOpen(true)}
-            onMouseLeave={() => setCategoriesOpen(false)}
-          >
-            <button
-              type="button"
-              className="flex items-center gap-1 rounded px-3 py-2 text-white hover:bg-white/10"
-            >
-              {t("nav.categories")}
-              <ChevronDown className="h-4 w-4" />
-            </button>
-            {categoriesOpen && (
-              <div className="absolute left-0 top-full min-w-[280px] rounded-b-md border border-t-0 border-border bg-white py-2 shadow-lg">
-                {CATEGORY_IDS.map((id) => (
-                  <Link
-                    key={id}
-                    to={`/products/${id}`}
-                    className="block px-4 py-2 text-foreground hover:bg-muted"
-                    onClick={() => setCategoriesOpen(false)}
-                  >
-                    {t(categoryIdToI18nKey[id])}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
+          {/* Products, About, FAQ */}
           <Link
-            to="/why-mega-pharm"
+            to="/products"
             className="flex items-center gap-1 rounded px-3 py-2 text-white hover:bg-white/10"
           >
-            {t("nav.whyMegaPharm")}
-            <ChevronDown className="h-4 w-4" />
+            {t("nav.products")}
           </Link>
-          {/* More: About, FAQ, News, Blog */}
+          <Link
+            to="/about"
+            className="flex items-center gap-1 rounded px-3 py-2 text-white hover:bg-white/10"
+          >
+            {t("nav.about")}
+          </Link>
+          <Link
+            to="/faq"
+            className="flex items-center gap-1 rounded px-3 py-2 text-white hover:bg-white/10"
+          >
+            {t("nav.faq")}
+          </Link>
+
+          {/* More dropdown: Certificates, News, Blog */}
           <div
             className="relative"
             onMouseEnter={() => setMoreOpen(true)}
@@ -97,25 +62,19 @@ export function Header() {
             <button
               type="button"
               className="flex items-center gap-1 rounded px-3 py-2 text-white hover:bg-white/10"
+              onClick={() => setMoreOpen((o) => !o)}
             >
-              More
+              {t("nav.more")}
               <ChevronDown className="h-4 w-4" />
             </button>
             {moreOpen && (
-              <div className="absolute left-0 top-full min-w-[200px] rounded-b-md border border-t-0 border-border bg-white py-2 shadow-lg">
+              <div className="absolute right-0 top-full min-w-[200px] rounded-b-md border border-t-0 border-border bg-white py-2 shadow-lg">
                 <Link
-                  to="/about"
+                  to="/why-mega-pharm#certificates"
                   className="block px-4 py-2 text-foreground hover:bg-muted"
                   onClick={() => setMoreOpen(false)}
                 >
-                  {t("nav.about")}
-                </Link>
-                <Link
-                  to="/faq"
-                  className="block px-4 py-2 text-foreground hover:bg-muted"
-                  onClick={() => setMoreOpen(false)}
-                >
-                  {t("nav.faq")}
+                  {t("why.certificates")}
                 </Link>
                 <Link
                   to="/news"
@@ -137,24 +96,30 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <form onSubmit={handleSearch} className="hidden items-center md:flex">
+          {/* Desktop search - glass effect, minimal */}
+          <form
+            onSubmit={handleSearch}
+            className="relative hidden items-center lg:flex"
+          >
+            <Search className="pointer-events-none absolute left-3 h-4 w-4 text-white/70" />
             <input
               type="search"
               placeholder={t("nav.searchPlaceholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="h-9 w-48 rounded-l-md border border-r-0 bg-white px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              className="h-10 w-56 rounded-full border border-white/25 bg-white/10 pl-9 pr-4 text-sm text-white placeholder:text-white/60 shadow-sm backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/60"
             />
-            <Button
-              type="submit"
-              size="icon"
-              variant="secondary"
-              className="rounded-l-none h-9 w-9"
-            >
-              <Search className="h-4 w-4" />
-            </Button>
           </form>
-          <LanguageSwitcher />
+          <LanguageSwitcher minimal />
+          {/* Desktop start button */}
+          <div className="hidden items-center md:flex">
+            <Link
+              to="/register"
+              className="rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-mega-navy shadow-sm transition hover:bg-mega-light"
+            >
+              {t("nav.start")}
+            </Link>
+          </div>
           <Link
             to="/cart"
             className="relative flex items-center gap-1.5 rounded p-2 text-white transition-colors hover:bg-white/10"
@@ -185,14 +150,7 @@ export function Header() {
             className="block py-2 text-foreground"
             onClick={() => setMobileMenuOpen(false)}
           >
-            {t("nav.categories")}
-          </Link>
-          <Link
-            to="/why-mega-pharm"
-            className="block py-2 text-foreground"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {t("nav.whyMegaPharm")}
+            {t("nav.products")}
           </Link>
           <Link
             to="/about"
@@ -207,6 +165,13 @@ export function Header() {
             onClick={() => setMobileMenuOpen(false)}
           >
             {t("nav.faq")}
+          </Link>
+          <Link
+            to="/why-mega-pharm#certificates"
+            className="block py-2 text-foreground"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {t("why.certificates")}
           </Link>
           <Link
             to="/news"
@@ -229,11 +194,18 @@ export function Header() {
           >
             {t("nav.cart")} ({itemCount})
           </Link>
+          <Link
+            to="/register"
+            className="block py-2 text-foreground"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {t("nav.start")}
+          </Link>
           <div
             className="mt-2 border-t pt-3"
             onClick={(e) => e.stopPropagation()}
           >
-            <LanguageSwitcher variant="light" />
+            <LanguageSwitcher variant="light" minimal />
           </div>
           <form onSubmit={handleSearch} className="mt-2 flex gap-2">
             <input

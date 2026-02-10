@@ -13,7 +13,15 @@ const LANGUAGES = [
 
 type Variant = "dark" | "light";
 
-export function LanguageSwitcher({ variant = "dark" }: { variant?: Variant }) {
+interface LanguageSwitcherProps {
+  variant?: Variant;
+  minimal?: boolean;
+}
+
+export function LanguageSwitcher({
+  variant = "dark",
+  minimal = false,
+}: LanguageSwitcherProps) {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -44,10 +52,14 @@ export function LanguageSwitcher({ variant = "dark" }: { variant?: Variant }) {
         type="button"
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium backdrop-blur-sm transition-all duration-200",
-          isLight
-            ? "border-border bg-muted/80 text-foreground hover:bg-muted focus:ring-mega-navy"
-            : "border-white/20 bg-white/5 text-white hover:bg-white/15 hover:border-white/20 focus:ring-white/40 focus:ring-offset-mega-navy",
+          "flex items-center rounded-full text-sm font-medium backdrop-blur-sm transition-all duration-200",
+          minimal
+            ? "h-9 w-9 justify-center border border-white/30 bg-white/10 text-white hover:bg-white/20 focus:ring-white/40 focus:ring-offset-mega-navy"
+            : "gap-2 border px-3 py-2",
+          !minimal &&
+            (isLight
+              ? "border-border bg-muted/80 text-foreground hover:bg-muted focus:ring-mega-navy"
+              : "border-white/20 bg-white/5 text-white hover:bg-white/15 hover:border-white/20 focus:ring-white/40 focus:ring-offset-mega-navy"),
           "focus:outline-none focus:ring-2 focus:ring-offset-2",
           open &&
             (isLight
@@ -59,24 +71,28 @@ export function LanguageSwitcher({ variant = "dark" }: { variant?: Variant }) {
         aria-label="Select language"
       >
         <Globe className="h-4 w-4 shrink-0 opacity-90" />
-        <span className="hidden sm:inline">{current.label}</span>
-        <span className="sm:hidden">{current.short}</span>
-        <svg
-          className={cn(
-            "h-4 w-4 shrink-0 transition-transform duration-200",
-            open && "rotate-180",
-          )}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        {!minimal && (
+          <>
+            <span className="hidden sm:inline">{current.label}</span>
+            <span className="sm:hidden">{current.short}</span>
+            <svg
+              className={cn(
+                "h-4 w-4 shrink-0 transition-transform duration-200",
+                open && "rotate-180",
+              )}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </>
+        )}
       </button>
 
       <div

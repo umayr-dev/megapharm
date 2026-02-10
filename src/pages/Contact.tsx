@@ -37,7 +37,9 @@ export function Contact() {
           <ul className="mt-4 space-y-4 text-muted-foreground">
             <li className="flex items-center gap-3">
               <MapPin className="h-5 w-5 shrink-0 text-mega-navy" />
-              <span>Central Asia</span>
+              <span>
+                Uzbekistan, Tashkent, Yunus Abad district, Hotira street 1
+              </span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-mega-navy" />
@@ -48,10 +50,10 @@ export function Contact() {
             <li className="flex items-center gap-3">
               <Mail className="h-5 w-5 shrink-0 text-mega-navy" />
               <a
-                href="mailto:info@megapharm.com"
+                href="mailto:megafarmservice@mail.ru"
                 className="hover:text-primary"
               >
-                info@megapharm.com
+                megafarmservice@mail.ru
               </a>
             </li>
           </ul>

@@ -19,9 +19,6 @@ export function Footer() {
                 className="h-8 w-auto"
               />
             </Link>
-            <p className="mt-4 text-sm text-white/80">
-              {t("footer.description")}
-            </p>
           </div>
 
           {/* Quick Links */}
@@ -114,21 +111,18 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/80">
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>Central Asia</span>
+                <span>
+                  Uzbekistan, Tashkent, Yunus Abad district, Hotira street 1
+                </span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
-                <a href="tel:+998901234567" className="hover:text-white">
-                  +998 90 123 45 67
-                </a>
-              </li>
+              
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />
                 <a
-                  href="mailto:info@megapharm.com"
+                  href="mailto:megafarmservice@mail.ru"
                   className="hover:text-white"
                 >
-                  info@megapharm.com
+                  megafarmservice@mail.ru
                 </a>
               </li>
             </ul>

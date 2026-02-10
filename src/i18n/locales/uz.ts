@@ -6,7 +6,7 @@ export const uz = {
     signIn: "Kirish",
     register: "Ro'yxatdan o'tish",
     search: "Qidiruv",
-    searchPlaceholder: "MEGA PHARM qidirish",
+    searchPlaceholder: "Qidiruv",
     cart: "Savat",
     home: "Bosh sahifa",
     products: "Mahsulotlar",
@@ -15,6 +15,8 @@ export const uz = {
     news: "Yangiliklar",
     blog: "Blog",
     contact: "Aloqa",
+    more: "Ko'proq",
+    start: "Boshlash",
   },
   footer: {
     description:

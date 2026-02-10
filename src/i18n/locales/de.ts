@@ -6,7 +6,7 @@ export const de = {
     signIn: "Anmelden",
     register: "Registrieren",
     search: "Suche",
-    searchPlaceholder: "MEGA PHARM suchen",
+    searchPlaceholder: "Suche",
     cart: "Warenkorb",
     home: "Start",
     products: "Produkte",
@@ -15,6 +15,8 @@ export const de = {
     news: "Neuigkeiten",
     blog: "Blog",
     contact: "Kontakt",
+    more: "Mehr",
+    start: "Start",
   },
   footer: {
     description:

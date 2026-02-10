@@ -6,7 +6,7 @@ export const ar = {
     signIn: "تسجيل الدخول",
     register: "التسجيل",
     search: "بحث",
-    searchPlaceholder: "بحث MEGA PHARM",
+    searchPlaceholder: "بحث",
     cart: "السلة",
     home: "الرئيسية",
     products: "المنتجات",
@@ -15,6 +15,8 @@ export const ar = {
     news: "أخبار",
     blog: "المدونة",
     contact: "اتصل بنا",
+    more: "المزيد",
+    start: "ابدأ",
   },
   footer: {
     description:
