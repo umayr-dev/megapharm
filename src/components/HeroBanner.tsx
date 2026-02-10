@@ -112,12 +112,32 @@ export function HeroBanner() {
             </div>
           </div>
           <div className="relative hidden flex-1 items-center justify-center md:flex">
-            <div
-              className="h-56 w-44 rounded-2xl bg-white/20 shadow-xl md:h-64 md:w-52"
-              style={{
-                animation: "float 4s ease-in-out infinite",
-              }}
-            />
+            <div className="relative h-64 w-64">
+              <img
+                src="/МЕГА БИФИДУМ (6).webp"
+                alt="МЕГА БИФИДУМ"
+                loading="lazy"
+                decoding="async"
+                className="absolute left-0 top-6 h-40 w-28 rotate-[-8deg] rounded-xl bg-white object-contain p-2 shadow-xl"
+                style={{ animation: "float 4s ease-in-out infinite" }}
+              />
+              <img
+                src="/БИОБАЛАНС (8).webp"
+                alt="БИОБАЛАНС"
+                loading="lazy"
+                decoding="async"
+                className="absolute right-0 top-0 h-44 w-30 rotate-[6deg] rounded-xl bg-white object-contain p-2 shadow-xl"
+                style={{ animation: "float 4s ease-in-out infinite" }}
+              />
+              <img
+                src="/ЭНДОФЛОР (8).webp"
+                alt="ЭНДОФЛОР"
+                loading="lazy"
+                decoding="async"
+                className="absolute bottom-0 left-8 h-40 w-28 rounded-xl bg-white object-contain p-2 shadow-xl"
+                style={{ animation: "float 4s ease-in-out infinite" }}
+              />
+            </div>
           </div>
         </div>
       ))}

@@ -44,12 +44,11 @@ export function Header() {
       {/* Main nav */}
       <div className="flex items-center justify-between gap-4 bg-mega-navy px-4 py-3 text-white md:px-6">
         <Link to="/" className="flex shrink-0 items-center gap-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-xl font-bold">
-            M
-          </div>
-          <span className="hidden font-semibold md:inline">
-            MEGA PHARM SERVICE
-          </span>
+          <img
+            src="/logo.png"
+            alt="MEGA PHARM SERVICE"
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

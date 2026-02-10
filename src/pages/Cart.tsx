@@ -41,6 +41,8 @@ export function Cart() {
                   <img
                     src={product.image}
                     alt={t(product.nameKey)}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover object-center"
                   />
                 </div>

@@ -167,6 +167,14 @@ export const uz = {
   },
   product: {
     descGeneric: "Mikroflorani qo'llab-quvvatlash uchun probiotik qo'shimcha.",
+    megaBifidumDesc:
+      "Yangi tug‘ilgan chaqaloqlar va kattalarda ichak mikroflorasini tiklash va qo‘llab‑quvvatlash uchun mo‘ljallangan. Ichak mikroflorasini me’yorga keltirishga, immunitetni mustahkamlashga va disbakteriozning oldini olishga yordam beradi.",
+    megaLaktoDesc:
+      "Yangi tug‘ilgan chaqaloqlar va kattalarda ichak mikroflorasini oldini olish va me’yorlashtirish, turli kelib chiqishli disbakteriozni kamaytirish hamda antibiotiklar kursi vaqtida va undan keyin organizmni qo‘llab‑quvvatlash uchun qo‘llaniladi.",
+    laktoBakterinDesc:
+      "«Lakto Bakterin» hazm qilish tizimi mikroflorasini me’yorlashtirish va antibiotik terapiyasidan keyin ichak mikroflorasini tiklashda qo‘llaniladi. Diareya, dam bo‘lish va ichakdagi noqulaylikni kamaytirishga yordam beradi.",
+    bifidumBakterinDesc:
+      "«Bifidum Bakterin» biфidobakteriyalar yetishmovchiligini to‘ldirishga, normal ichak mikroflorasini tiklashga va bolalar hamda kattalarda diareya va ichakdagi noqulaylik belgilarini kamaytirishga yordam beradi.",
     baktrisubtil: "Baktrimsubtil",
     biobalansK: "Biobalans K",
     biobalans: "Biobalans",

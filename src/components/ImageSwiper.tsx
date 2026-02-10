@@ -23,6 +23,8 @@ export function ImageSwiper({ images, alt = "", className }: ImageSwiperProps) {
         <img
           src={images[index]}
           alt={total > 1 ? `${alt} (${index + 1}/${total})` : alt}
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-contain object-center"
         />
       </div>

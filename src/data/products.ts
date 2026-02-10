@@ -9,32 +9,32 @@ export interface Product {
   image: string;
 }
 
-// Public folder dagi rasmlar nomiga qarab mahsulotlar
+// Public folder dagi WebP rasmlar nomiga qarab mahsulotlar
 const PRODUCT_IMAGES = [
-  "БАКТРИМСУБТИЛ.jpg",
-  "БИОБАЛАНС к.jpg",
-  "БИОБАЛАНС.jpg",
-  "БИФИДУМ БАКТЕРИН.jpg",
-  "ИМКУР 20 к.jpg",
-  "ИМКУР 20 саше.jpg",
-  "ЛАКТО БАКТЕРИН.jpg",
-  "МЕГА БИФИДУМ 300 мг.jpg",
-  "МЕГА БИФИДУМ.jpg",
-  "МЕГА ЛАКТО 300 мг .jpg",
-  "МЕГА ЛАКТО.jpg",
-  "МЕГАВИТА саше.jpg",
-  "ПРО БУЛАРД 20 к.jpg",
-  "ПРОБИ ЛАЙФ 10 к.jpg",
-  "ПРОБИ ЛАЙФ.jpg",
-  "ПРОБИНАВ 7+ 10 к.jpg",
-  "ПРОБИНАВ 7+.jpg",
-  "ПРОБИНАВ ЛБ+ к.jpg",
-  "ПРОБИНАВ ЛБ+.jpg",
-  "ФАРМАТИК.jpg",
-  "ЭНДОФЛОР 10 к.jpg",
-  "ЭНДОФЛОР.jpg",
-  "ЭНТЕРОНОРМ к.jpg",
-  "ЭНТЕРОНОРМ.jpg",
+  "БАКТРИМСУБТИЛ (1).webp",
+  "БИОБАЛАНС к.webp",
+  "БИОБАЛАНС (8).webp",
+  "БИФИДУМ БАКТЕРИН.webp",
+  "ИМКУР 20 к.webp",
+  "ИМКУР 20 саше.webp",
+  "ЛАКТО БАКТЕРИН.webp",
+  "МЕГА БИФИДУМ 300 мг.webp",
+  "МЕГА БИФИДУМ (6).webp",
+  "МЕГА ЛАКТО 300 мг .webp",
+  "МЕГА ЛАКТО (6).webp",
+  "МЕГАВИТА саше (6).webp",
+  "ПРО БУЛАРД 20 к.webp",
+  "ПРОБИ ЛАЙФ 10 к.webp",
+  "ПРОБИ ЛАЙФ (7).webp",
+  "ПРОБИНАВ 7+ 10 к.webp",
+  "ПРОБИНАВ 7+ (8).webp",
+  "ПРОБИНАВ ЛБ+ к.webp",
+  "ПРОБИНАВ ЛБ+ (7).webp",
+  "ФАРМАТИК (8).webp",
+  "ЭНДОФЛОР 10 к.webp",
+  "ЭНДОФЛОР (8).webp",
+  "ЭНТЕРОНОРМ к.webp",
+  "ЭНТЕРОНОРМ (8).webp",
 ] as const;
 
 const CATEGORIES: CategoryId[] = [
@@ -91,11 +91,38 @@ const NAME_KEYS = [
   "product.enteronorm",
 ] as const;
 
+const DESC_KEYS: string[] = [
+  "product.descGeneric", // БАКТРИМСУБТИЛ
+  "product.descGeneric", // БИОБАЛАНС к
+  "product.descGeneric", // БИОБАЛАНС
+  "product.bifidumBakterinDesc", // БИФИДУМ БАКТЕРИН
+  "product.descGeneric", // ИМКУР 20 к
+  "product.descGeneric", // ИМКУР 20 саше
+  "product.laktoBakterinDesc", // ЛАКТО БАКТЕРИН
+  "product.megaBifidumDesc", // МЕГА БИФИДУМ 300 мг
+  "product.megaBifidumDesc", // МЕГА БИФИДУМ
+  "product.megaLaktoDesc", // МЕГА ЛАКТО 300 мг
+  "product.megaLaktoDesc", // МЕГА ЛАКТО
+  "product.descGeneric", // МЕГАВИТА саше
+  "product.descGeneric", // ПРО БУЛАРД 20 к
+  "product.descGeneric", // ПРОБИ ЛАЙФ 10 к
+  "product.descGeneric", // ПРОБИ ЛАЙФ
+  "product.descGeneric", // ПРОБИНАВ 7+ 10 к
+  "product.descGeneric", // ПРОБИНАВ 7+
+  "product.descGeneric", // ПРОБИНАВ ЛБ+ к
+  "product.descGeneric", // ПРОБИНАВ ЛБ+
+  "product.descGeneric", // ФАРМАТИК
+  "product.descGeneric", // ЭНДОФЛОР 10 к
+  "product.descGeneric", // ЭНДОФЛОР
+  "product.descGeneric", // ЭНТЕРОНОРМ к
+  "product.descGeneric", // ЭНТЕРОНОРМ
+];
+
 export const MOCK_PRODUCTS: Product[] = PRODUCT_IMAGES.map((img, i) => ({
   id: String(i + 1),
   categoryId: CATEGORIES[i],
   nameKey: NAME_KEYS[i],
-  descriptionKey: "product.descGeneric",
+  descriptionKey: DESC_KEYS[i] ?? "product.descGeneric",
   price: 0,
   image: `/${img}`,
 }));

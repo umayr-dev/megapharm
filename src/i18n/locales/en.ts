@@ -169,6 +169,14 @@ export const en = {
   },
   product: {
     descGeneric: "Probiotic supplement for microbiome support.",
+    megaBifidumDesc:
+      "Intended for restoration and maintenance of healthy gastrointestinal microflora in newborns and adults. Helps normalize intestinal flora, strengthen immunity from the first days of life and is recommended to help prevent dysbacteriosis.",
+    megaLaktoDesc:
+      "Used to prevent and normalize intestinal microflora in newborns and adults, eliminate dysbacteriosis of various origins and support the body during and after antibiotic therapy.",
+    laktoBakterinDesc:
+      "Lactobacterin Mega is used to normalize digestive microflora and restore intestinal balance after antibiotic therapy. Helps eliminate diarrhea, bloating and intestinal discomfort.",
+    bifidumBakterinDesc:
+      "Bifidumbacterin Mega effectively replenishes the deficiency of bifidobacteria, helps restore normal intestinal microflora and reduce diarrhea and intestinal discomfort in children and adults.",
     baktrisubtil: "Bactrimsubtil",
     biobalansK: "Biobalans K",
     biobalans: "Biobalans",

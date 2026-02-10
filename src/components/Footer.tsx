@@ -13,10 +13,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-lg font-bold">
-                M
-              </div>
-              <span className="font-semibold">MEGA PHARM SERVICE</span>
+              <img
+                src="/logo.png"
+                alt="MEGA PHARM SERVICE"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-4 text-sm text-white/80">
               {t("footer.description")}

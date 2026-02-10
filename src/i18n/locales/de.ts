@@ -184,5 +184,13 @@ export const de = {
     endoflor: "Endoflor",
     enteronormK: "Enteronorm K",
     enteronorm: "Enteronorm",
+    megaBifidumDesc:
+      "Zur Wiederherstellung und Erhaltung einer gesunden Darmflora bei Neugeborenen und Erwachsenen. Unterstützt die Normalisierung der Darmflora und trägt zur Stärkung des Immunsystems bei.",
+    megaLaktoDesc:
+      "Zur Vorbeugung und Normalisierung der Darmmikroflora, zur Linderung von Dysbakteriose und zur Unterstützung des Körpers während und nach einer Antibiotikatherapie.",
+    laktoBakterinDesc:
+      "Laktobakterin Mega wird zur Normalisierung der Verdauungsmikroflora und zur Wiederherstellung der Darmflora nach einer Antibiotikabehandlung verwendet. Hilft Durchfall, Blähungen und Unwohlsein im Darm zu reduzieren.",
+    bifidumBakterinDesc:
+      "Bifidumbakterin Mega füllt den Mangel an Bifidobakterien auf, unterstützt die Wiederherstellung einer normalen Darmflora und reduziert Durchfall und Darmbeschwerden.",
   },
 };
