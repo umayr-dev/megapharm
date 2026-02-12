@@ -194,5 +194,11 @@ export const de = {
       "Laktobakterin Mega wird zur Normalisierung der Verdauungsmikroflora und zur Wiederherstellung der Darmflora nach einer Antibiotikabehandlung verwendet. Hilft Durchfall, Blähungen und Unwohlsein im Darm zu reduzieren.",
     bifidumBakterinDesc:
       "Bifidumbakterin Mega füllt den Mangel an Bifidobakterien auf, unterstützt die Wiederherstellung einer normalen Darmflora und reduziert Durchfall und Darmbeschwerden.",
+    detailsTitle: "Detaillierte Produktinformation",
+    releaseFormLabel: "Darreichungsform",
+    compositionLabel: "Probiotische Zusammensetzung",
+    vitaminsLabel: "Vitamine",
+    microelementsLabel: "Spurenelemente",
+    cfuLabel: "Lebende Mikroorganismen (KBE)",
   },
 };

@@ -200,5 +200,11 @@ export const ru = {
     endoflor: "ЭНДОФЛОР",
     enteronormK: "ЭНТЕРОНОРМ к",
     enteronorm: "ЭНТЕРОНОРМ",
+    detailsTitle: "Полная информация о продукте",
+    releaseFormLabel: "Форма выпуска",
+    compositionLabel: "Пробиотический состав",
+    vitaminsLabel: "Витамины",
+    microelementsLabel: "Микроэлементы",
+    cfuLabel: "Количество живых микроорганизмов",
   },
 };

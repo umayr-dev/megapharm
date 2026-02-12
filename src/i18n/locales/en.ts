@@ -203,5 +203,11 @@ export const en = {
     endoflor: "Endoflor",
     enteronormK: "Enteronorm K",
     enteronorm: "Enteronorm",
+    detailsTitle: "Full product information",
+    releaseFormLabel: "Release form",
+    compositionLabel: "Probiotic composition",
+    vitaminsLabel: "Vitamins",
+    microelementsLabel: "Microelements",
+    cfuLabel: "Viable microorganisms (CFU)",
   },
 };

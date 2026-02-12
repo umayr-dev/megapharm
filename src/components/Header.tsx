@@ -104,7 +104,7 @@ export function Header() {
             <Search className="pointer-events-none absolute left-3 h-4 w-4 text-white/70" />
             <input
               type="search"
-              placeholder={t("nav.searchPlaceholder")}
+              placeholder={t("nav.searchPlaci heholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="h-10 w-56 rounded-full border border-white/25 bg-white/10 pl-9 pr-4 text-sm text-white placeholder:text-white/60 shadow-sm backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-white/60"

@@ -201,5 +201,11 @@ export const uz = {
     endoflor: "Endoflor",
     enteronormK: "Enteronorm K",
     enteronorm: "Enteronorm",
+    detailsTitle: "Dorining to'liq tavsifi",
+    releaseFormLabel: "Chiqarilish shakli",
+    compositionLabel: "Probiotik tarkibi",
+    vitaminsLabel: "Vitaminlar",
+    microelementsLabel: "Mikroelementlar",
+    cfuLabel: "Tirik mikroorganizmlar soni",
   },
 };
