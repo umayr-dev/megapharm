@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -23,10 +23,22 @@ export function Layout() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen max-w-[100vw] flex-col overflow-x-hidden">
       <Header />
       <main className="flex-1">
-        <Outlet />
+        <Suspense
+          fallback={
+            <div
+              className="flex min-h-[50vh] items-center justify-center"
+              aria-busy="true"
+              aria-label="Loading"
+            >
+              <div className="h-10 w-10 animate-spin rounded-full border-2 border-mega-navy border-t-transparent" />
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <DiscountPopup />

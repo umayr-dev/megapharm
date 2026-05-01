@@ -88,6 +88,7 @@ export const PRODUCT_DETAILS: Record<Product["nameKey"], ProductExtraInfo> = {
     composition:
       "Bifidobacterium bifidum 1, Bifidobacterium longum 83, Lactobacillus plantarum 8P-A3, Lactobacillus fermentum 90T-C4, Lactobacillus acidophilus E-70, Lactobacillus bulgaricum E-100; Streptococcus lactis E-1",
     prebiotics: "Topinambur (inulin)",
+    microelements: "Zinc Zn+2",
     cfu: "The number of viable lactobacilli, KOE/g not less than 5×10^9",
   },
   "product.probinav710k": {
@@ -95,6 +96,7 @@ export const PRODUCT_DETAILS: Record<Product["nameKey"], ProductExtraInfo> = {
     composition:
       "Bifidobacterium bifidum 1, Bifidobacterium longum 83, Lactobacillus plantarum 8P-A3, Lactobacillus fermentum 90T-C4, Lactobacillus acidophilus E-70, Lactobacillus bulgaricum E-100; Streptococcus lactis E-1",
     prebiotics: "Topinambur (inulin)",
+    microelements: "Zinc Zn+2",
     cfu: "The number of viable lactobacilli, KOE/g not less than 5×10^9",
   },
 
@@ -121,12 +123,16 @@ export const PRODUCT_DETAILS: Record<Product["nameKey"], ProductExtraInfo> = {
     releaseForm: "Release form: sachet and capsule",
     composition:
       "Lactobacillus plantarum 8P-A3, Lactobacillus fermentum 90T-C4, Bifidobacterium bifidum 1, Lactobacillus acidophilus E-70, Streptococcus thermophilus E-1, Lactobacillus bulgaricum E-100",
+    vitamins: "Vitamin D3, Vitamin C",
+    microelements: "Zinc Zn+2",
     cfu: "The number of viable lactobacilli, KOE/g not less than 5×10^9",
   },
   "product.probiLife10k": {
     releaseForm: "Release form: sachet and capsule (10 caps)",
     composition:
       "Lactobacillus plantarum 8P-A3, Lactobacillus fermentum 90T-C4, Bifidobacterium bifidum 1, Lactobacillus acidophilus E-70, Streptococcus thermophilus E-1, Lactobacillus bulgaricum E-100",
+    vitamins: "Vitamin D3, Vitamin C",
+    microelements: "Zinc Zn+2",
     cfu: "The number of viable lactobacilli, KOE/g not less than 5×10^9",
   },
 
@@ -194,7 +200,7 @@ export const PRODUCT_DETAILS: Record<Product["nameKey"], ProductExtraInfo> = {
     releaseForm: "Release form: capsule",
     composition:
       "Bifidobacterium bifidum 1, Bifidobacterium longum 17x, Lactobacillus plantarum 8P-A3, Lactobacillus fermentum 90T-C4",
-    prebiotics: "Ginger, Turmeric, Apple Pectin",
+    prebiotics: "Apple pectin",
     vitamins: "Vitamin B2, Vitamin B9",
     cfu: "The number of viable lactobacilli, KOE/g not less than 1×10^9",
   },

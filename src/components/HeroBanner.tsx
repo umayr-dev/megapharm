@@ -1,12 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const SLIDE_DURATION_MS = 5500;
-const TRANSITION_MS = 700;
+const SLIDE_DURATION_MS = 6000;
+const TRANSITION_MS = 650;
+
+const HERO_BASE =
+  "bg-gradient-to-br from-mega-navy from-[8%] via-[#0c3566] via-45% to-[#13589c] to-[100%]";
 
 export function HeroBanner() {
   const { t } = useTranslation();
@@ -19,28 +22,24 @@ export function HeroBanner() {
       subheadline: t("hero.subheadline"),
       cta: t("hero.shopNow"),
       to: "/products",
-      gradient: "from-mega-sky/40 via-mega-light to-mega-sky/20",
-      accent: "bg-mega-navy",
     },
     {
       headline: "Support Your Microbiome",
       subheadline: "Probiotics you can trust",
       cta: t("common.learnMore"),
       to: "/why-mega-pharm",
-      gradient: "from-mega-navy/90 via-mega-blue/80 to-mega-navy/90",
-      accent: "bg-white",
     },
     {
       headline: "Wide Range of Solutions",
       subheadline: "From daily support to specialized formulas",
       cta: t("common.shopAll"),
       to: "/products",
-      gradient: "from-mega-light via-white to-mega-sky/30",
-      accent: "bg-mega-navy",
     },
   ];
 
-  const slideCount = 3;
+  const slide = slides[index];
+  const slideCount = slides.length;
+
   const goTo = useCallback(
     (next: number) => {
       if (isTransitioning) return;
@@ -60,120 +59,96 @@ export function HeroBanner() {
   }, [slideCount]);
 
   return (
-    <section className="relative h-[min(85vh,560px)] w-full overflow-hidden rounded-b-2xl md:h-[min(75vh,520px)]">
-      {/* Slides */}
-      {slides.map((slide, i) => (
-        <div
-          key={i}
-          className={cn(
-            "absolute inset-0 flex flex-col justify-center px-6 py-12 transition-all duration-[700ms] ease-out md:flex-row md:items-center md:px-12 lg:px-16",
-            `bg-gradient-to-r ${slide.gradient}`,
-            i === index
-              ? "translate-x-0 opacity-100"
-              : i < index
-              ? "-translate-x-full opacity-0"
-              : "translate-x-full opacity-0"
-          )}
-          style={{ transitionProperty: "transform, opacity" }}
-        >
-          <div className="relative z-10 flex flex-1 flex-col justify-center">
-            <h1
-              className={cn(
-                "text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl",
-                slide.accent === "bg-white" ? "text-white" : "text-mega-navy"
-              )}
-            >
+    <section
+      className="relative isolate w-full max-w-[100vw] overflow-x-hidden"
+      aria-roledescription="carousel"
+    >
+      <div
+        className={cn(
+          "relative flex min-h-[min(88vh,640px)] w-full max-w-full flex-col overflow-hidden rounded-none shadow-[0_20px_60px_-15px_rgba(8,30,64,0.45)] sm:rounded-b-2xl md:min-h-[min(78vh,600px)] lg:rounded-b-[2rem]"
+        )}
+      >
+        <div className={cn("pointer-events-none absolute inset-0", HERO_BASE)} />
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute right-0 top-0 h-[min(480px,50vh)] w-[min(480px,45vw)] max-w-[100%] translate-x-1/4 rounded-full bg-sky-400/15 blur-[100px]" />
+          <div className="absolute bottom-0 left-0 h-[min(440px,45vh)] w-[min(440px,40vw)] max-w-[100%] -translate-x-1/4 rounded-full bg-cyan-300/10 blur-[90px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_70%_45%,rgba(56,189,248,0.08),transparent_60%)]" />
+        </div>
+
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:max-w-7xl lg:px-10 lg:py-16 xl:px-12">
+          <div
+            key={index}
+            className="max-w-2xl animate-hero-fade-up"
+          >
+            <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/95 ring-1 ring-white/15">
+              <Sparkles className="h-3.5 w-3.5 text-sky-200/90" aria-hidden />
+              MEGA PHARM SERVICE
+            </div>
+            <h1 className="text-balance text-3xl font-bold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.25rem]">
               {slide.headline}
             </h1>
-            <p
-              className={cn(
-                "mt-2 text-lg md:text-xl",
-                slide.accent === "bg-white"
-                  ? "text-white/90"
-                  : "text-mega-navy/90"
-              )}
-            >
+            <p className="mt-4 max-w-lg text-pretty text-lg leading-relaxed text-white/80 sm:text-xl">
               {slide.subheadline}
-              {i === 0 && <sup className="ml-0.5 text-sm">+</sup>}
+              {index === 0 && (
+                <sup className="ml-0.5 align-super text-sm font-medium text-sky-200/90">
+                  +
+                </sup>
+              )}
             </p>
-            <div className="mt-6">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Button
                 asChild
                 size="lg"
-                className={cn(
-                  "transition-transform hover:scale-[1.02]",
-                  slide.accent === "bg-white"
-                    ? "bg-white text-mega-navy hover:bg-white/95"
-                    : "bg-mega-navy hover:bg-mega-blue"
-                )}
+                className="h-12 rounded-full bg-white px-8 text-base font-semibold text-mega-navy shadow-lg transition hover:-translate-y-0.5 hover:bg-white/95 hover:shadow-xl"
               >
                 <Link to={slide.to}>{slide.cta}</Link>
               </Button>
-            </div>
-          </div>
-          <div className="relative hidden flex-1 items-center justify-center md:flex">
-            <div className="relative h-64 w-64">
-              <img
-                src="/МЕГА БИФИДУМ (6).webp"
-                alt="МЕГА БИФИДУМ"
-                loading="lazy"
-                decoding="async"
-                className="absolute left-0 top-6 h-40 w-28 rotate-[-8deg] rounded-xl bg-white object-contain p-2 shadow-xl"
-                style={{ animation: "float 4s ease-in-out infinite" }}
-              />
-              <img
-                src="/БИОБАЛАНС (8).webp"
-                alt="БИОБАЛАНС"
-                loading="lazy"
-                decoding="async"
-                className="absolute right-0 top-0 h-44 w-30 rotate-[6deg] rounded-xl bg-white object-contain p-2 shadow-xl"
-                style={{ animation: "float 4s ease-in-out infinite" }}
-              />
-              <img
-                src="/ЭНДОФЛОР (8).webp"
-                alt="ЭНДОФЛОР"
-                loading="lazy"
-                decoding="async"
-                className="absolute bottom-0 left-8 h-40 w-28 rounded-xl bg-white object-contain p-2 shadow-xl"
-                style={{ animation: "float 4s ease-in-out infinite" }}
-              />
+              <Button
+                asChild
+                variant="ghost"
+                size="lg"
+                className="h-12 rounded-full px-6 font-medium text-white hover:bg-white/10 hover:text-white"
+              >
+                <Link to="/about">{t("nav.about")}</Link>
+              </Button>
             </div>
           </div>
         </div>
-      ))}
 
-      {/* Arrows */}
-      <button
-        type="button"
-        onClick={() => goTo(index - 1)}
-        className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-2 text-mega-navy shadow-lg transition hover:bg-white md:left-4"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-5 w-5" />
-      </button>
-      <button
-        type="button"
-        onClick={() => goTo(index + 1)}
-        className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/90 p-2 text-mega-navy shadow-lg transition hover:bg-white md:right-4"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-5 w-5" />
-      </button>
+        <button
+          type="button"
+          onClick={() => goTo(index - 1)}
+          className="absolute left-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:left-4 md:left-6"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          onClick={() => goTo(index + 1)}
+          className="absolute right-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:right-4 md:right-6"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => goTo(i)}
-            className={cn(
-              "h-2 rounded-full transition-all duration-300",
-              i === index ? "w-8 bg-white" : "w-2 bg-white/60 hover:bg-white/80"
-            )}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
+        <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/20 px-4 py-2.5 shadow-lg backdrop-blur-md ring-1 ring-white/10">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => goTo(i)}
+              className={cn(
+                "h-2 rounded-full transition-all duration-300 ease-out",
+                i === index
+                  ? "w-8 bg-white"
+                  : "w-2 bg-white/40 hover:bg-white/65"
+              )}
+              aria-label={`Slide ${i + 1}`}
+              aria-current={i === index}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

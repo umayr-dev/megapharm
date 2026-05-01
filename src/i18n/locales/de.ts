@@ -15,6 +15,8 @@ export const de = {
     news: "Neuigkeiten",
     blog: "Blog",
     contact: "Kontakt",
+    certificates: "Zertifikate",
+    patents: "Patente",
     more: "Mehr",
     start: "Start",
   },
@@ -45,19 +47,22 @@ export const de = {
   },
   about: {
     title: "Über MEGA PHARM SERVICE",
-    subtitle: "Ihr Partner für Probiotik-Gesundheit",
+    subtitle: "Hersteller probiotischer Produkte seit 2009",
     intro:
-      "Seit 2009 ist MEGA PHARM SERVICE ein führender Hersteller von Probiotika in Zentralasien.",
-    ourStory: "Unsere Geschichte",
+      "MEGA PHARM SERVICE LLC ist ein pharmazeutisches Unternehmen, das seit 2009 Nahrungsergänzungsmittel auf Basis probiotischer Bakterien herstellt. Zu den Hauptprodukten gehören Megabifidum, Megalakto, Bactrimsubtil, Probilife sowie weitere Darreichungsformen in Fläschchen, Kapseln und Sachets.",
+    ourStory: "Über das Unternehmen",
     ourStoryText:
-      "Mit der Mission, wirksame Probiotika zugänglich zu machen, haben wir über 50 Formeln entwickelt.",
-    values: "Unsere Werte",
-    quality: "Qualität",
-    qualityText: "Strenge Kontrolle in jeder Phase.",
-    science: "Wissenschaft",
-    scienceText: "Produkte von Mikrobiologen auf Basis aktueller Forschung.",
-    trust: "Vertrauen",
-    trustText: "Transparenz, Zertifikate und langfristige Beziehungen.",
+      "Die Produkte von MEGA PHARM SERVICE werden gemäß technischen Spezifikationen und technologischen Anweisungen hergestellt, die mit dem Gesundheitsministerium der Republik Usbekistan abgestimmt sind, und verfügen über Hygiene- und Konformitätszertifikate. Im Unternehmen ist ein Lebensmittelsicherheitsmanagementsystem nach HACCP-Grundsätzen (ISO 22000:2005) implementiert; jede Charge von Rohstoffen und Fertigprodukten wird regelmäßig in akkreditierten Laboren geprüft. MEGA PHARM SERVICE stellt seine Produkte regelmäßig auf Fachmessen und Ausstellungen des Gesundheitsministeriums vor. Unsere Mission ist die Entwicklung und Herstellung innovativer Arzneimittel; unsere Vision ist es, das Unternehmen auf internationale Märkte zu führen und seine Position weltweit zu stärken; unsere Werte sind Qualität, Professionalität und Nutzen für alle Bevölkerungsschichten.",
+    values: "Mission, Vision und Werte",
+    quality: "Qualität und Sicherheit",
+    qualityText:
+      "Die Produktion erfolgt von Grund auf mit innovativen Technologien auf moderner Importausrüstung aus Deutschland, Tschechien und China bei strenger laborseitiger Kontrolle jeder Charge.",
+    science: "Professionalität und Wissenschaft",
+    scienceText:
+      "Im Unternehmen arbeiten hochqualifizierte Fachkräfte mit großer Erfahrung; die Formeln werden gemeinsam mit Mikrobiologen entwickelt und richten sich nach aktuellen wissenschaftlichen Anforderungen.",
+    trust: "Verantwortung gegenüber Menschen",
+    trustText:
+      "Einhaltung internationaler Standards, transparente Prozesse und der Fokus auf den gesellschaftlichen Nutzen schaffen langfristiges Vertrauen bei Kunden, Partnern und der medizinischen Fachwelt.",
   },
   news: {
     title: "Neuigkeiten",
@@ -159,6 +164,9 @@ export const de = {
     getDiscount: "10 % Rabatt sichern",
     learnMore: "Mehr erfahren",
     shopAll: "Alle Produkte",
+    showMore: "Mehr",
+    productsPage: "Seite {{current}} von {{total}}",
+    viewProduct: "Zum Produkt",
   },
   product: {
     descGeneric: "Probiotikum für Mikroflora-Unterstützung.",
@@ -200,5 +208,24 @@ export const de = {
     vitaminsLabel: "Vitamine",
     microelementsLabel: "Spurenelemente",
     cfuLabel: "Lebende Mikroorganismen (KBE)",
+    addToCart: "In den Warenkorb",
+    clinicalTitle: "Anwendungsgebiet & Eigenschaften",
+    suitableForLabel: "Geeignet für",
+    keyBacteriaSummaryLabel: "Wichtige Bakterien",
+    clinicalEffectLabel: "Wirkung / Verwendung",
+  },
+  docs: {
+    certificatesPageTitle: "Zertifikate & Konformität",
+    certificatesIntro:
+      "Offizielle Unternehmenszertifikate. Hier ansehen oder jedes PDF in einem neuen Tab öffnen.",
+    patentsPageTitle: "Patente & Registrierungsurkunden",
+    patentsIntro:
+      "Patente und staatliche Registrierungsdokumente für unsere Produkte.",
+    openPdfNewTab: "In neuem Tab öffnen",
+    downloadPdf: "Herunterladen",
+    selectDocument: "Dokument wählen",
+    pdfPreviewTip:
+      "Die eingebettete Vorschau funktioniert nicht in jedem Browser — öffnen Sie die Datei für beste Darstellung in einem neuen Tab.",
+    allDocumentsShort: "Alle Dokumente",
   },
 };

@@ -15,6 +15,8 @@ export const en = {
     news: "News",
     blog: "Blog",
     contact: "Contact",
+    certificates: "Certificates",
+    patents: "Patents",
     more: "More",
     start: "Start",
   },
@@ -46,22 +48,22 @@ export const en = {
   },
   about: {
     title: "About MEGA PHARM SERVICE",
-    subtitle: "Your trusted partner in probiotic health",
+    subtitle: "Probiotic manufacturer since 2009",
     intro:
-      "Since 2009, MEGA PHARM SERVICE has been a leading producer of probiotic dietary supplements in Central Asia. We combine science, quality control, and a wide range of products to support health for adults and children.",
-    ourStory: "Our story",
+      "MEGA PHARM SERVICE LLC is a pharmaceutical company that since 2009 has been producing food supplements based on probiotic bacteria. Its key products include Megabifidum, Megalakto, Bactrimsubtil, Probilife and other forms in vials, capsules and sachets.",
+    ourStory: "About the company",
     ourStoryText:
-      "Founded with a mission to make effective probiotics accessible, we have developed over 50 unique formulas and built long-term partnerships with distributors and specialists.",
-    values: "Our values",
-    quality: "Quality",
+      "MEGA PHARM SERVICE products are manufactured in accordance with technical specifications and technological instructions approved by the Ministry of Health of the Republic of Uzbekistan and are supported by hygiene certificates and certificates of conformity. The company has implemented a food safety management system based on HACCP principles (ISO 22000:2005); every batch of raw materials and finished products undergoes regular testing in accredited laboratories. MEGA PHARM SERVICE regularly presents its products at industry exhibitions and fairs organized by the Ministry of Health. Our mission is to develop and produce innovative medicinal products; our vision is to bring the company to international markets and strengthen its position globally; our values are quality, professionalism and creating benefit for all segments of the population.",
+    values: "Mission, vision and values",
+    quality: "Quality and safety",
     qualityText:
-      "Strict control at every stage, from raw materials to finished product.",
-    science: "Science",
+      "Production is carried out from the ground up using innovative technologies on modern imported equipment from Germany, the Czech Republic and China, with strict laboratory control of every batch.",
+    science: "Professionalism and science",
     scienceText:
-      "Products developed with microbiologists and based on current research.",
-    trust: "Trust",
+      "The company employs highly educated specialists with extensive experience in their field; product formulas are developed with microbiologists and aligned with modern scientific requirements.",
+    trust: "Responsibility to people",
     trustText:
-      "Transparency, certifications, and lasting relationships with partners and customers.",
+      "Compliance with international standards, transparent processes and a focus on public benefit build long‑term trust among customers, partners and the medical community.",
   },
   news: {
     title: "News",
@@ -168,6 +170,9 @@ export const en = {
     getDiscount: "Get 10% discount",
     learnMore: "Learn More",
     shopAll: "Shop All Products",
+    showMore: "More",
+    productsPage: "Page {{current}} of {{total}}",
+    viewProduct: "View product",
   },
   product: {
     descGeneric: "Probiotic supplement for microbiome support.",
@@ -209,5 +214,24 @@ export const en = {
     vitaminsLabel: "Vitamins",
     microelementsLabel: "Microelements",
     cfuLabel: "Viable microorganisms (CFU)",
+    addToCart: "Add to cart",
+    clinicalTitle: "Indications & key properties",
+    suitableForLabel: "Suitable for",
+    keyBacteriaSummaryLabel: "Key bacteria",
+    clinicalEffectLabel: "Effects / intended use",
+  },
+  docs: {
+    certificatesPageTitle: "Certificates & compliance",
+    certificatesIntro:
+      "Official company certificates. View on this page or open each PDF in a new tab.",
+    patentsPageTitle: "Patents & registration certificates",
+    patentsIntro:
+      "Patents and state registration documents for our products.",
+    openPdfNewTab: "Open in new tab",
+    downloadPdf: "Download",
+    selectDocument: "Choose a document",
+    pdfPreviewTip:
+      "Embedded preview may not work in all browsers — open in a new tab for the best experience.",
+    allDocumentsShort: "All documents",
   },
 };

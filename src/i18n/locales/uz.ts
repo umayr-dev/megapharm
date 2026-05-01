@@ -15,6 +15,8 @@ export const uz = {
     news: "Yangiliklar",
     blog: "Blog",
     contact: "Aloqa",
+    certificates: "Sertifikatlar",
+    patents: "Patentlar",
     more: "Ko'proq",
     start: "Boshlash",
   },
@@ -45,22 +47,22 @@ export const uz = {
   },
   about: {
     title: "MEGA PHARM SERVICE haqida",
-    subtitle: "Probiotik salomatlikda ishonchli hamkor",
+    subtitle: "2009-yildan beri probiotik mahsulotlar ishlab chiqaruvchisi",
     intro:
-      "2009-yildan beri MEGA PHARM SERVICE Markaziy Osiyoda probiotik qo'shimcha ovqatlar ishlab chiqaruvchi yetakchi kompaniyalardan biri. Kattalar va bolalar salomatligini qo'llab-quvvatlash uchun fan, sifat nazorati va keng assortimentni birlashtiramiz.",
-    ourStory: "Bizning tariximiz",
+      "«MEGA PHARM SERVICE» MCHJ 2009-yildan buyon probiotik bakteriyalar asosida biologik faol qo'shimchalar (BAA) ishlab chiqaradigan farmatsevtika kompaniyasi hisoblanadi. Kompaniyaning asosiy mahsulotlari qatoriga «Megabifidum», «Megalakto», «Baktrimsubtil», «Probilife» va flakon, kapsula hamda sashay ko‘rinishidagi boshqa shakllar kiradi.",
+    ourStory: "Kompaniya haqida",
     ourStoryText:
-      "Samarali probiotiklarni qulay qilish maqsadida 50 dan ortiq noyob formulalar yaratdik va distribyutorlar va mutaxassislar bilan uzoq muddatli aloqalar qurdik.",
-    values: "Bizning qadriyatlarimiz",
-    quality: "Sifat",
+      "MEGA PHARM SERVICE mahsulotlari O‘zbekiston Respublikasi Sog‘liqni saqlash vazirligi bilan kelishilgan texnik shartlar va texnologik yo‘riqnomalar asosida ishlab chiqariladi hamda gigiyenik sertifikatlar va muvofiqlik sertifikatlariga ega. Korxonada HACCP tamoyillariga asoslangan oziq-ovqat xavfsizligi menejmenti tizimi (ISO 22000:2005) joriy etilgan; xom ashyo va tayyor mahsulotning har bir partiyasi akkreditatsiyadan o‘tgan laboratoriyalarda muntazam sinovlardan o‘tkaziladi. Kompaniya har yili SSV tomonidan tashkil etiladigan ko‘rgazmalar va sanoat yarmarkalarida o‘z mahsulotlarini mutaxassislar va hamkorlarga taqdim etadi. Bizning missiyamiz — innovatsion dori vositalarini ishlab chiqish va ishlab chiqarish; bizning qarashimiz — kompaniyani xalqaro bozorlarga olib chiqish va uning maqomini jahon darajasida mustahkamlash; qadriyatlarimiz — sifat, professionallik va barcha aholiga foyda yaratish.",
+    values: "Missiya, qarash va qadriyatlar",
+    quality: "Sifat va xavfsizlik",
     qualityText:
-      "Xom ashyodan tayyor mahsulotgacha barcha bosqichlarda qat'iy nazorat.",
-    science: "Fan",
+      "Mahsulotlar Germaniya, Chexiya va Xitoydan keltirilgan zamonaviy import uskunalarda, nol sikldan boshlab innovatsion texnologiyalar asosida, har bir partiya bo‘yicha qat'iy laboratoriya nazorati ostida ishlab chiqariladi.",
+    science: "Professionallik va fan",
     scienceText:
-      "Mikrobiologlar tomonidan zamonaviy tadqiqotlar asosida yaratilgan mahsulotlar.",
-    trust: "Ishonch",
+      "Korxonada o‘z yo‘nalishi bo‘yicha katta tajribaga ega oliy ma’lumotli mutaxassislar ishlaydi; formulalar zamonaviy ilmiy talablardan kelib chiqqan holda mikrobiologlar ishtirokida yaratiladi.",
+    trust: "Odamlar oldidagi mas’uliyat",
     trustText:
-      "Shaffoflik, sertifikatlar va hamkorlar va mijozlar bilan uzoq muddatli munosabatlar.",
+      "Xalqaro standartlarga rioya qilish, jarayonlarning shaffofligi va barcha aholi qatlamlari uchun foyda yaratishga qaratilgan yondashuv mijozlar, hamkorlar va tibbiyot hamjamiyati ishonchini mustahkamlaydi.",
   },
   news: {
     title: "Yangiliklar",
@@ -166,6 +168,9 @@ export const uz = {
     getDiscount: "10% chegirma oling",
     learnMore: "Batafsil",
     shopAll: "Barcha mahsulotlar",
+    showMore: "Yana",
+    productsPage: "{{current}} / {{total}} sahifa",
+    viewProduct: "Mahsulotni ko'rish",
   },
   product: {
     descGeneric: "Mikroflorani qo'llab-quvvatlash uchun probiotik qo'shimcha.",
@@ -207,5 +212,24 @@ export const uz = {
     vitaminsLabel: "Vitaminlar",
     microelementsLabel: "Mikroelementlar",
     cfuLabel: "Tirik mikroorganizmlar soni",
+    addToCart: "Savatga qo'shish",
+    clinicalTitle: "Ko'rsatmalar va asosiy xususiyatlar",
+    suitableForLabel: "Kimlar uchun",
+    keyBacteriaSummaryLabel: "Asosiy bakteriyalar",
+    clinicalEffectLabel: "Ta'sir / qo'llanish",
+  },
+  docs: {
+    certificatesPageTitle: "Sertifikatlar va muvofiqlik",
+    certificatesIntro:
+      "Kompaniyaning rasmiy sertifikatlari. Sahifada ko'rish yoki har bir PDFni yangi varaqda ochish.",
+    patentsPageTitle: "Patentlar va ro'yxatdan o'tkazish guvohnomalari",
+    patentsIntro:
+      "Mahsulotlarimiz bo'yicha patentlar va davlat ro'yxatidan o'tkazish hujjatlari.",
+    openPdfNewTab: "Yangi varaqda ochish",
+    downloadPdf: "Yuklab olish",
+    selectDocument: "Hujjatni tanlang",
+    pdfPreviewTip:
+      "Ko‘rib chiqish ba’zi brauzerlarda ishlamasligi mumkin — eng yaxshi ko‘rinish uchun yangi varaqda oching.",
+    allDocumentsShort: "Barcha hujjatlar",
   },
 };

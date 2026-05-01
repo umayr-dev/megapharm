@@ -1,20 +1,56 @@
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { Home } from "@/pages/Home";
-import { Products } from "@/pages/Products";
-import { ProductDetail } from "@/pages/ProductDetail";
-import { Cart } from "@/pages/Cart";
-import { Login } from "@/pages/Login";
-import { Register } from "@/pages/Register";
-import { WhyMegaPharm } from "@/pages/WhyMegaPharm";
-import { About } from "@/pages/About";
-import { FAQ } from "@/pages/FAQ";
-import { News } from "@/pages/News";
-import { NewsDetail } from "@/pages/NewsDetail";
-import { Blog } from "@/pages/Blog";
-import { BlogDetail } from "@/pages/BlogDetail";
-import { Contact } from "@/pages/Contact";
 import "@/i18n";
+
+const Home = lazy(() =>
+  import("@/pages/Home").then((m) => ({ default: m.Home }))
+);
+const Products = lazy(() =>
+  import("@/pages/Products").then((m) => ({ default: m.Products }))
+);
+const ProductDetail = lazy(() =>
+  import("@/pages/ProductDetail").then((m) => ({ default: m.ProductDetail }))
+);
+const Cart = lazy(() =>
+  import("@/pages/Cart").then((m) => ({ default: m.Cart }))
+);
+const Login = lazy(() =>
+  import("@/pages/Login").then((m) => ({ default: m.Login }))
+);
+const Register = lazy(() =>
+  import("@/pages/Register").then((m) => ({ default: m.Register }))
+);
+const WhyMegaPharm = lazy(() =>
+  import("@/pages/WhyMegaPharm").then((m) => ({ default: m.WhyMegaPharm }))
+);
+const About = lazy(() =>
+  import("@/pages/About").then((m) => ({ default: m.About }))
+);
+const FAQ = lazy(() =>
+  import("@/pages/FAQ").then((m) => ({ default: m.FAQ }))
+);
+const News = lazy(() =>
+  import("@/pages/News").then((m) => ({ default: m.News }))
+);
+const NewsDetail = lazy(() =>
+  import("@/pages/NewsDetail").then((m) => ({ default: m.NewsDetail }))
+);
+const Blog = lazy(() =>
+  import("@/pages/Blog").then((m) => ({ default: m.Blog }))
+);
+const BlogDetail = lazy(() =>
+  import("@/pages/BlogDetail").then((m) => ({ default: m.BlogDetail }))
+);
+const Contact = lazy(() =>
+  import("@/pages/Contact").then((m) => ({ default: m.Contact }))
+);
+const Certificates = lazy(() =>
+  import("@/pages/Certificates").then((m) => ({ default: m.Certificates }))
+);
+const Patents = lazy(() =>
+  import("@/pages/Patents").then((m) => ({ default: m.Patents }))
+);
 
 function App() {
   return (
@@ -36,6 +72,8 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<BlogDetail />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="certificates" element={<Certificates />} />
+          <Route path="patents" element={<Patents />} />
         </Route>
       </Routes>
     </BrowserRouter>

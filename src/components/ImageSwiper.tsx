@@ -21,7 +21,7 @@ export function ImageSwiper({ images, alt = "", className }: ImageSwiperProps) {
     <div className={cn("relative overflow-hidden rounded-lg", className)}>
       <div className="aspect-square w-full overflow-hidden bg-muted">
         <img
-          src={images[index]}
+          src={encodeURI(images[index])}
           alt={total > 1 ? `${alt} (${index + 1}/${total})` : alt}
           loading="lazy"
           decoding="async"

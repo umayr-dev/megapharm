@@ -17,7 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <Link to={`/product/${product.id}`} className="block flex-1 p-4">
         <div className="aspect-square w-full overflow-hidden rounded-md bg-muted mb-3">
           <img
-            src={product.image}
+            src={encodeURI(product.image)}
             alt={t(product.nameKey)}
             loading="lazy"
             decoding="async"
@@ -42,7 +42,7 @@ export function ProductCard({ product }: ProductCardProps) {
             addItem(product);
           }}
         >
-          Add to Cart
+          {t("product.addToCart")}
         </Button>
       </div>
     </article>

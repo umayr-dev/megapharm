@@ -13,7 +13,7 @@ export function Home() {
       <HeroBanner />
 
       <ProductRowSwiper
-        products={MOCK_PRODUCTS.slice(0, 8)}
+        products={MOCK_PRODUCTS}
         title={t("categories.title")}
         subtitle={t("why.subtitle")}
       />
