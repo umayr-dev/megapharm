@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight, ShoppingBag } from "lucide-react";
@@ -16,9 +17,13 @@ interface HomeProductCardProps {
   priority?: boolean;
 }
 
-export function HomeProductCard({ product, priority }: HomeProductCardProps) {
+export const HomeProductCard = memo(function HomeProductCard({
+  product,
+  priority,
+}: HomeProductCardProps) {
   const { t } = useTranslation();
   const { addItem } = useCart();
+  const thumb = imageSrc(product.imageThumb);
 
   return (
     <article
@@ -35,11 +40,14 @@ export function HomeProductCard({ product, priority }: HomeProductCardProps) {
         <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50/60 dark:from-slate-900/40 dark:via-card dark:to-mega-navy/10">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(14,116,144,0.08),transparent_55%)]" />
           <img
-            src={imageSrc(product.image)}
+            src={thumb}
             alt={t(product.nameKey)}
+            width={360}
+            height={450}
             loading={priority ? "eager" : "lazy"}
             decoding="async"
             fetchPriority={priority ? "high" : "low"}
+            sizes="(max-width: 768px) 45vw, 220px"
             className="relative z-[1] h-full w-full object-contain p-5 transition duration-500 ease-out group-hover:scale-[1.06]"
           />
         </div>
@@ -73,4 +81,4 @@ export function HomeProductCard({ product, priority }: HomeProductCardProps) {
       </div>
     </article>
   );
-}
+});

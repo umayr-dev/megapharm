@@ -311,7 +311,7 @@ export function Header() {
               className="flex-1 rounded border bg-background px-3 py-2 text-sm"
             />
             <Button type="submit" size="sm">
-              Search
+              {t("nav.search")}
             </Button>
           </form>
         </div>

@@ -39,7 +39,7 @@ export function Cart() {
               >
                 <div className="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-muted">
                   <img
-                    src={product.image}
+                    src={encodeURI(product.imageThumb)}
                     alt={t(product.nameKey)}
                     loading="lazy"
                     decoding="async"

@@ -28,13 +28,14 @@
   * {
     @apply border-border;
   }
+  /* clip: gorizontal scroll yo‘q, sticky bilan mos (hidden sticky’ni buzadi) */
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
   body {
     @apply bg-background text-foreground antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
 }

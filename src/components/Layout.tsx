@@ -1,11 +1,13 @@
 import { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DiscountPopup } from "@/components/DiscountPopup";
 import { ArrowUp, MessageCircle } from "lucide-react";
 
 export function Layout() {
+  const { t } = useTranslation();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
 
@@ -23,7 +25,7 @@ export function Layout() {
   };
 
   return (
-    <div className="flex min-h-screen max-w-[100vw] flex-col overflow-x-hidden">
+    <div className="flex min-h-screen max-w-[100vw] flex-col overflow-x-clip">
       <Header />
       <main className="flex-1">
         <Suspense
@@ -31,7 +33,7 @@ export function Layout() {
             <div
               className="flex min-h-[50vh] items-center justify-center"
               aria-busy="true"
-              aria-label="Loading"
+              aria-label={t("common.loading")}
             >
               <div className="h-10 w-10 animate-spin rounded-full border-2 border-mega-navy border-t-transparent" />
             </div>
@@ -49,7 +51,7 @@ export function Layout() {
             type="button"
             onClick={scrollToTop}
             className="flex h-11 w-11 items-center justify-center rounded-full bg-mega-navy text-white shadow-lg transition hover:bg-mega-blue focus:outline-none focus:ring-2 focus:ring-mega-blue focus:ring-offset-2 focus:ring-offset-white"
-            aria-label="Scroll to top"
+            aria-label={t("layout.scrollToTop")}
           >
             <ArrowUp className="h-5 w-5" />
           </button>
@@ -58,7 +60,7 @@ export function Layout() {
           type="button"
           onClick={() => setChatOpen(true)}
           className="flex h-11 w-11 items-center justify-center rounded-full bg-mega-navy text-white shadow-lg transition hover:bg-mega-blue focus:outline-none focus:ring-2 focus:ring-mega-blue focus:ring-offset-2 focus:ring-offset-white"
-          aria-label="Support chat"
+          aria-label={t("layout.openSupportChat")}
         >
           <MessageCircle className="h-5 w-5" />
         </button>
@@ -75,7 +77,7 @@ export function Layout() {
           >
             <div className="mb-3 flex items-center justify-between gap-2">
               <h2 className="text-lg font-semibold text-foreground">
-                Support chat
+                {t("chat.title")}
               </h2>
               <button
                 type="button"
@@ -86,8 +88,7 @@ export function Layout() {
               </button>
             </div>
             <p className="mb-4 text-sm text-muted-foreground">
-              Send us a message and we will get back to you as soon as
-              possible.
+              {t("chat.intro")}
             </p>
             <form
               className="space-y-3"
@@ -98,31 +99,31 @@ export function Layout() {
             >
               <div className="space-y-1">
                 <label className="text-xs font-medium text-muted-foreground">
-                  Email
+                  {t("auth.email")}
                 </label>
                 <input
                   type="email"
                   required
                   className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-mega-navy"
-                  placeholder="you@example.com"
+                  placeholder={t("chat.emailPlaceholder")}
                 />
               </div>
               <div className="space-y-1">
                 <label className="text-xs font-medium text-muted-foreground">
-                  Message
+                  {t("contact.message")}
                 </label>
                 <textarea
                   required
                   rows={4}
                   className="w-full resize-none rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-mega-navy"
-                  placeholder="How can we help you?"
+                  placeholder={t("chat.messagePlaceholder")}
                 />
               </div>
               <button
                 type="submit"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-md bg-mega-navy px-3 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-mega-blue"
               >
-                Send message
+                {t("chat.send")}
               </button>
             </form>
           </div>

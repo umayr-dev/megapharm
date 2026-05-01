@@ -1,3 +1,4 @@
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -8,19 +9,31 @@ interface ProductCardProps {
   product: Product;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export const ProductCard = memo(function ProductCard({ product }: ProductCardProps) {
   const { t } = useTranslation();
   const { addItem } = useCart();
+  const [src, setSrc] = useState(() => encodeURI(product.imageThumb));
+
+  const handleImgError = () => {
+    setSrc(encodeURI(product.image));
+  };
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
+    <article
+      className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-md [content-visibility:auto] [contain-intrinsic-size:280px_380px]"
+    >
       <Link to={`/product/${product.id}`} className="block flex-1 p-4">
         <div className="aspect-square w-full overflow-hidden rounded-md bg-muted mb-3">
           <img
-            src={encodeURI(product.image)}
+            src={src}
             alt={t(product.nameKey)}
+            width={280}
+            height={280}
             loading="lazy"
             decoding="async"
+            fetchPriority="low"
+            sizes="(max-width: 640px) 50vw, 25vw"
+            onError={handleImgError}
             className="h-full w-full object-cover object-center"
           />
         </div>
@@ -47,4 +60,4 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
     </article>
   );
-}
+});

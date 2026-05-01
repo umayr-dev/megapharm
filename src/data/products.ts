@@ -6,7 +6,10 @@ export interface Product {
   nameKey: string;
   descriptionKey: string;
   price: number;
+  /** To‘liq o‘lcham — mahsulot sahifasi */
   image: string;
+  /** Katalog / home — `npm run thumbs` bilan yaratiladi */
+  imageThumb: string;
 }
 
 // Public folder: WebP rasmlar (dori nomi bilan mos, yengilroq yuklanish)
@@ -125,4 +128,5 @@ export const MOCK_PRODUCTS: Product[] = PRODUCT_IMAGES.map((img, i) => ({
   descriptionKey: DESC_KEYS[i] ?? "product.descGeneric",
   price: 0,
   image: `/${img}`,
+  imageThumb: `/product-thumbs/${img}`,
 }));

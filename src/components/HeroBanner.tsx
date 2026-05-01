@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
@@ -12,30 +12,33 @@ const HERO_BASE =
   "bg-gradient-to-br from-mega-navy from-[8%] via-[#0c3566] via-45% to-[#13589c] to-[100%]";
 
 export function HeroBanner() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const slides = [
-    {
-      headline: t("hero.headline"),
-      subheadline: t("hero.subheadline"),
-      cta: t("hero.shopNow"),
-      to: "/products",
-    },
-    {
-      headline: "Support Your Microbiome",
-      subheadline: "Probiotics you can trust",
-      cta: t("common.learnMore"),
-      to: "/why-mega-pharm",
-    },
-    {
-      headline: "Wide Range of Solutions",
-      subheadline: "From daily support to specialized formulas",
-      cta: t("common.shopAll"),
-      to: "/products",
-    },
-  ];
+  const slides = useMemo(
+    () => [
+      {
+        headline: t("hero.headline"),
+        subheadline: t("hero.subheadline"),
+        cta: t("hero.shopNow"),
+        to: "/products",
+      },
+      {
+        headline: t("hero.slide2Headline"),
+        subheadline: t("hero.slide2Subheadline"),
+        cta: t("common.learnMore"),
+        to: "/why-mega-pharm",
+      },
+      {
+        headline: t("hero.slide3Headline"),
+        subheadline: t("hero.slide3Subheadline"),
+        cta: t("common.shopAll"),
+        to: "/products",
+      },
+    ],
+    [t, i18n.language],
+  );
 
   const slide = slides[index];
   const slideCount = slides.length;
@@ -82,7 +85,7 @@ export function HeroBanner() {
           >
             <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/95 ring-1 ring-white/15">
               <Sparkles className="h-3.5 w-3.5 text-sky-200/90" aria-hidden />
-              MEGA PHARM SERVICE
+              {t("hero.badge")}
             </div>
             <h1 className="text-balance text-3xl font-bold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-[3.25rem]">
               {slide.headline}
@@ -119,7 +122,7 @@ export function HeroBanner() {
           type="button"
           onClick={() => goTo(index - 1)}
           className="absolute left-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:left-4 md:left-6"
-          aria-label="Previous slide"
+          aria-label={t("hero.prevSlide")}
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -127,7 +130,7 @@ export function HeroBanner() {
           type="button"
           onClick={() => goTo(index + 1)}
           className="absolute right-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:right-4 md:right-6"
-          aria-label="Next slide"
+          aria-label={t("hero.nextSlide")}
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -144,7 +147,7 @@ export function HeroBanner() {
                   ? "w-8 bg-white"
                   : "w-2 bg-white/40 hover:bg-white/65"
               )}
-              aria-label={`Slide ${i + 1}`}
+              aria-label={t("hero.goToSlide", { n: i + 1 })}
               aria-current={i === index}
             />
           ))}

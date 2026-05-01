@@ -14,6 +14,13 @@ export function ProductSidebar() {
 
   return (
     <aside className="w-full shrink-0 md:w-64">
+      <div
+        className={cn(
+          "md:sticky md:top-24 md:z-[60]",
+          "md:max-h-[calc(100vh-7rem)] md:overflow-y-auto md:overscroll-y-contain",
+          "md:rounded-xl md:border md:border-border md:bg-card md:p-3 md:shadow-sm",
+        )}
+      >
       <h3 className="mb-3 text-sm font-semibold text-foreground">
         {t("categories.viewBy")}
       </h3>
@@ -69,6 +76,7 @@ export function ProductSidebar() {
             )}
           />
         </button>
+      </div>
       </div>
     </aside>
   );

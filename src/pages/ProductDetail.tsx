@@ -20,7 +20,7 @@ export function ProductDetail() {
   if (!product) {
     return (
       <div className="mx-auto max-w-4xl px-4 py-12 text-center">
-        <p className="text-muted-foreground">Product not found.</p>
+        <p className="text-muted-foreground">{t("common.productNotFound")}</p>
         <Link
           to="/products"
           className="mt-4 inline-block text-primary hover:underline"
@@ -100,14 +100,12 @@ export function ProductDetail() {
           {extra && (
             <div className="mt-2 rounded-xl border bg-muted/40 p-4 text-xs text-foreground space-y-2 md:text-sm md:p-5">
               <p className="text-sm font-semibold tracking-wide text-mega-navy">
-                {t("product.detailsTitle", { defaultValue: "Product details" })}
+                {t("product.detailsTitle")}
               </p>
               {extra.releaseForm && (
                 <p>
                   <span className="font-medium">
-                    {t("product.releaseFormLabel", {
-                      defaultValue: "Release form",
-                    })}
+                    {t("product.releaseFormLabel")}
                     :{" "}
                   </span>
                   {extra.releaseForm}
@@ -116,9 +114,7 @@ export function ProductDetail() {
               {extra.composition && (
                 <div>
                   <p className="font-medium">
-                    {t("product.compositionLabel", {
-                      defaultValue: "Probiotics / composition",
-                    })}
+                    {t("product.compositionLabel")}
                     :
                   </p>
                   <ul className="mt-1 list-disc list-inside space-y-0.5 text-xs md:text-sm">
@@ -131,9 +127,7 @@ export function ProductDetail() {
               {extra.prebiotics && (
                 <p>
                   <span className="font-medium">
-                    {t("product.prebioticsLabel", {
-                      defaultValue: "Prebiotics / additional ingredients",
-                    })}
+                    {t("product.prebioticsLabel")}
                     :{" "}
                   </span>
                   {extra.prebiotics}
@@ -142,9 +136,7 @@ export function ProductDetail() {
               {extra.fruits && (
                 <p>
                   <span className="font-medium">
-                    {t("product.fruitsLabel", {
-                      defaultValue: "Fruit base",
-                    })}
+                    {t("product.fruitsLabel")}
                     :{" "}
                   </span>
                   {extra.fruits}
@@ -153,9 +145,7 @@ export function ProductDetail() {
               {extra.vitamins && (
                 <p>
                   <span className="font-medium">
-                    {t("product.vitaminsLabel", {
-                      defaultValue: "Vitamins",
-                    })}
+                    {t("product.vitaminsLabel")}
                     :{" "}
                   </span>
                   {extra.vitamins}
@@ -164,9 +154,7 @@ export function ProductDetail() {
               {extra.microelements && (
                 <p>
                   <span className="font-medium">
-                    {t("product.microelementsLabel", {
-                      defaultValue: "Microelements",
-                    })}
+                    {t("product.microelementsLabel")}
                     :{" "}
                   </span>
                   {extra.microelements}
@@ -175,9 +163,7 @@ export function ProductDetail() {
               {extra.cfu && (
                 <p>
                   <span className="font-medium">
-                    {t("product.cfuLabel", {
-                      defaultValue: "Viable microorganisms",
-                    })}
+                    {t("product.cfuLabel")}
                     :{" "}
                   </span>
                   {extra.cfu}

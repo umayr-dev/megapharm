@@ -27,19 +27,17 @@ export function Contact() {
       <h1 className="text-3xl font-bold text-foreground md:text-4xl">
         {t("nav.contact")}
       </h1>
-      <p className="mt-2 text-muted-foreground">{t("footer.contact")}</p>
+      <p className="mt-2 text-muted-foreground">{t("contact.pageSubtitle")}</p>
 
       <div className="mt-10 grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="text-lg font-semibold text-foreground">
-            Get in touch
+            {t("contact.getInTouch")}
           </h2>
           <ul className="mt-4 space-y-4 text-muted-foreground">
             <li className="flex items-center gap-3">
               <MapPin className="h-5 w-5 shrink-0 text-mega-navy" />
-              <span>
-                Uzbekistan, Tashkent, Yunus Abad district, Hotira street 1
-              </span>
+              <span>{t("contact.address")}</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-5 w-5 shrink-0 text-mega-navy" />
@@ -60,12 +58,10 @@ export function Contact() {
         </div>
         <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-foreground">
-            Send a message
+            {t("contact.sendMessage")}
           </h2>
           {sent ? (
-            <p className="mt-4 text-muted-foreground">
-              Thank you. We will get back to you soon.
-            </p>
+            <p className="mt-4 text-muted-foreground">{t("contact.thankYou")}</p>
           ) : (
             <form onSubmit={handleSubmit} className="mt-4 space-y-4">
               <div>
@@ -73,7 +69,7 @@ export function Contact() {
                   htmlFor="contact-name"
                   className="block text-sm font-medium text-foreground"
                 >
-                  Name
+                  {t("contact.yourName")}
                 </label>
                 <input
                   id="contact-name"
@@ -90,7 +86,7 @@ export function Contact() {
                   htmlFor="contact-email"
                   className="block text-sm font-medium text-foreground"
                 >
-                  Email
+                  {t("auth.email")}
                 </label>
                 <input
                   id="contact-email"
@@ -107,7 +103,7 @@ export function Contact() {
                   htmlFor="contact-message"
                   className="block text-sm font-medium text-foreground"
                 >
-                  Message
+                  {t("contact.message")}
                 </label>
                 <textarea
                   id="contact-message"
@@ -120,7 +116,7 @@ export function Contact() {
                 />
               </div>
               <Button type="submit" className="bg-mega-navy hover:bg-mega-blue">
-                Send
+                {t("contact.send")}
               </Button>
             </form>
           )}
