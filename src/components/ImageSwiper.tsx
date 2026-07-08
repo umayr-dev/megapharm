@@ -6,9 +6,15 @@ interface ImageSwiperProps {
   images: string[];
   alt?: string;
   className?: string;
+  imageClassName?: string;
 }
 
-export function ImageSwiper({ images, alt = "", className }: ImageSwiperProps) {
+export function ImageSwiper({
+  images,
+  alt = "",
+  className,
+  imageClassName,
+}: ImageSwiperProps) {
   const [index, setIndex] = useState(0);
   const total = images.length;
 
@@ -19,7 +25,12 @@ export function ImageSwiper({ images, alt = "", className }: ImageSwiperProps) {
 
   return (
     <div className={cn("relative overflow-hidden rounded-lg", className)}>
-      <div className="aspect-square w-full overflow-hidden bg-muted">
+      <div
+        className={cn(
+          "aspect-square w-full overflow-hidden bg-white",
+          imageClassName,
+        )}
+      >
         <img
           src={encodeURI(images[index])}
           alt={total > 1 ? `${alt} (${index + 1}/${total})` : alt}

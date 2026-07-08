@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { loadLanguage } from "@/i18n";
 import { Globe, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -36,10 +37,8 @@ export function LanguageSwitcher({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const changeLanguage = (code: string) => {
-    i18n.changeLanguage(code);
-    document.documentElement.dir = code === "ar" ? "rtl" : "ltr";
-    document.documentElement.lang = code;
+  const changeLanguage = async (code: string) => {
+    await loadLanguage(code);
     setOpen(false);
   };
 

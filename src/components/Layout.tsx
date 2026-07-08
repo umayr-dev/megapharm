@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { DiscountPopup } from "@/components/DiscountPopup";
 import { ArrowUp, MessageCircle } from "lucide-react";
 
 export function Layout() {
@@ -12,11 +11,17 @@ export function Layout() {
   const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setShowScrollTop(window.scrollY > 300);
+        ticking = false;
+      });
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -43,7 +48,6 @@ export function Layout() {
         </Suspense>
       </main>
       <Footer />
-      <DiscountPopup />
       {/* Floating actions: scroll-to-top & support chat */}
       <div className="fixed bottom-6 right-4 z-40 flex flex-col gap-3 md:bottom-8 md:right-6">
         {showScrollTop && (

@@ -133,7 +133,26 @@ export const en = {
     starter: "Starter culture (tomizgi)",
     womensHealth: "Women's health",
     loadMore: "Show more",
+    all: "All",
     noResults: "No products found.",
+  },
+  home: {
+    browseCategories: "Browse by category",
+    categoriesHint: "Find the right probiotic for your needs",
+    productCount: "{{count}} products",
+    trustTitle: "International quality standards",
+    certVerified: "Certified",
+    ctaTitle: "Need help choosing a product?",
+    ctaSubtitle:
+      "Browse our full catalog or contact us — our team will help you find the right probiotic.",
+    productsTitle: "Our probiotic range",
+    productsSubtitle:
+      "Probiotic supplements for daily microbiome support, children's health, and specialized needs.",
+    statSince: "Founded",
+    statFormulas: "Unique formulas",
+    statExport: "US export approved",
+    statQuality: "Food safety standard",
+    statYears: "years of probiotic expertise",
   },
   why: {
     title: "Why MEGA PHARM SERVICE?",
@@ -177,7 +196,6 @@ export const en = {
     goToSlide: "Go to slide {{n}}",
   },
   common: {
-    getDiscount: "Get 10% discount",
     learnMore: "Learn More",
     shopAll: "Shop All Products",
     showMore: "More",
@@ -189,8 +207,7 @@ export const en = {
   contact: {
     pageSubtitle: "We’d love to hear from you.",
     getInTouch: "Get in touch",
-    address:
-      "Uzbekistan, Tashkent, Yunus Abad district, Hotira street 1",
+    address: "Uzbekistan, Tashkent, Yunus Abad district, Hotira street 1",
     sendMessage: "Send a message",
     thankYou: "Thank you. We will get back to you soon.",
     yourName: "Name",
@@ -199,8 +216,7 @@ export const en = {
   },
   chat: {
     title: "Support chat",
-    intro:
-      "Send us a message and we will get back to you as soon as possible.",
+    intro: "Send us a message and we will get back to you as soon as possible.",
     emailPlaceholder: "you@example.com",
     messagePlaceholder: "How can we help you?",
     send: "Send message",
@@ -262,8 +278,7 @@ export const en = {
     certificatesIntro:
       "Official company certificates. View on this page or open each PDF in a new tab.",
     patentsPageTitle: "Patents & registration certificates",
-    patentsIntro:
-      "Patents and state registration documents for our products.",
+    patentsIntro: "Patents and state registration documents for our products.",
     openPdfNewTab: "Open in new tab",
     downloadPdf: "Download",
     selectDocument: "Choose a document",

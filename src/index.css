@@ -80,3 +80,11 @@ html[dir="rtl"] {
 .animate-hero-fade-up {
   animation: hero-fade-up 0.65s ease-out forwards;
 }
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

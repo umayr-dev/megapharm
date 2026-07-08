@@ -18,6 +18,10 @@ export default defineConfig({
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
           i18n: ["i18next", "react-i18next"],
+          "product-data": [
+            "./src/data/productDetails.ts",
+            "./src/data/productClinical.ts",
+          ],
         },
       },
     },

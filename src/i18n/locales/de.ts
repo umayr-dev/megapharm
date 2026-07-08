@@ -127,7 +127,26 @@ export const de = {
     starter: "Starterkultur (Tomizgi)",
     womensHealth: "Frauengesundheit",
     loadMore: "Mehr anzeigen",
+    all: "Alle",
     noResults: "Keine Produkte gefunden.",
+  },
+  home: {
+    browseCategories: "Nach Kategorie durchsuchen",
+    categoriesHint: "Finden Sie das passende Probiotikum",
+    productCount: "{{count}} Produkte",
+    trustTitle: "Internationale Qualitätsstandards",
+    certVerified: "Zertifiziert",
+    ctaTitle: "Brauchen Sie Hilfe bei der Produktauswahl?",
+    ctaSubtitle:
+      "Durchsuchen Sie unseren vollständigen Katalog oder kontaktieren Sie uns — unser Team hilft Ihnen, das richtige Probiotikum zu finden.",
+    productsTitle: "Unser Probiotika-Sortiment",
+    productsSubtitle:
+      "Probiotische Nahrungsergänzung für tägliche Mikroflora, Kindergesundheit und spezielle Bedürfnisse.",
+    statSince: "Gegründet",
+    statFormulas: "Einzigartige Formeln",
+    statExport: "US-Export",
+    statQuality: "Lebensmittelsicherheit",
+    statYears: "Jahre Probiotika-Expertise",
   },
   why: {
     title: "Warum MEGA PHARM SERVICE?",
@@ -171,7 +190,6 @@ export const de = {
     goToSlide: "Zu Folie {{n}} springen",
   },
   common: {
-    getDiscount: "10 % Rabatt sichern",
     learnMore: "Mehr erfahren",
     shopAll: "Alle Produkte",
     showMore: "Mehr",
@@ -183,8 +201,7 @@ export const de = {
   contact: {
     pageSubtitle: "Wir freuen uns auf Ihre Nachricht.",
     getInTouch: "Kontakt",
-    address:
-      "Usbekistan, Taschkent, Bezirk Yunusabad, Straße Hotira 1",
+    address: "Usbekistan, Taschkent, Bezirk Yunusabad, Straße Hotira 1",
     sendMessage: "Nachricht senden",
     thankYou: "Vielen Dank. Wir melden uns bald bei Ihnen.",
     yourName: "Name",
@@ -193,8 +210,7 @@ export const de = {
   },
   chat: {
     title: "Support-Chat",
-    intro:
-      "Schreiben Sie uns — wir antworten so schnell wie möglich.",
+    intro: "Schreiben Sie uns — wir antworten so schnell wie möglich.",
     emailPlaceholder: "you@example.com",
     messagePlaceholder: "Wobei können wir helfen?",
     send: "Nachricht senden",

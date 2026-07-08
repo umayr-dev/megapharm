@@ -68,14 +68,13 @@ export function HeroBanner() {
     >
       <div
         className={cn(
-          "relative flex min-h-[min(88vh,640px)] w-full max-w-full flex-col overflow-hidden rounded-none shadow-[0_20px_60px_-15px_rgba(8,30,64,0.45)] sm:rounded-b-2xl md:min-h-[min(78vh,600px)] lg:rounded-b-[2rem]"
+          "relative flex min-h-[min(72vh,520px)] w-full max-w-full flex-col overflow-hidden rounded-none sm:rounded-b-2xl md:min-h-[min(68vh,480px)] lg:rounded-b-[2rem]"
         )}
       >
         <div className={cn("pointer-events-none absolute inset-0", HERO_BASE)} />
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute right-0 top-0 h-[min(480px,50vh)] w-[min(480px,45vw)] max-w-[100%] translate-x-1/4 rounded-full bg-sky-400/15 blur-[100px]" />
-          <div className="absolute bottom-0 left-0 h-[min(440px,45vh)] w-[min(440px,40vw)] max-w-[100%] -translate-x-1/4 rounded-full bg-cyan-300/10 blur-[90px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_55%_at_70%_45%,rgba(56,189,248,0.08),transparent_60%)]" />
+          <div className="absolute right-0 top-0 h-64 w-64 translate-x-1/4 rounded-full bg-sky-400/12" />
+          <div className="absolute bottom-0 left-0 h-56 w-56 -translate-x-1/4 rounded-full bg-cyan-300/8" />
         </div>
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 py-14 sm:px-6 sm:py-16 md:px-8 lg:max-w-7xl lg:px-10 lg:py-16 xl:px-12">
@@ -121,7 +120,7 @@ export function HeroBanner() {
         <button
           type="button"
           onClick={() => goTo(index - 1)}
-          className="absolute left-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:left-4 md:left-6"
+          className="absolute left-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30 sm:left-4 md:left-6"
           aria-label={t("hero.prevSlide")}
         >
           <ChevronLeft className="h-5 w-5" />
@@ -129,13 +128,13 @@ export function HeroBanner() {
         <button
           type="button"
           onClick={() => goTo(index + 1)}
-          className="absolute right-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white shadow-lg backdrop-blur-md transition hover:scale-105 hover:bg-white/25 sm:right-4 md:right-6"
+          className="absolute right-2 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white transition hover:bg-white/30 sm:right-4 md:right-6"
           aria-label={t("hero.nextSlide")}
         >
           <ChevronRight className="h-5 w-5" />
         </button>
 
-        <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/20 px-4 py-2.5 shadow-lg backdrop-blur-md ring-1 ring-white/10">
+        <div className="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/25 px-4 py-2.5">
           {slides.map((_, i) => (
             <button
               key={i}

@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import "@/i18n";
 
 const Home = lazy(() =>
   import("@/pages/Home").then((m) => ({ default: m.Home }))

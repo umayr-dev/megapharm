@@ -126,7 +126,26 @@ export const ar = {
     starter: "مزرعة البداية (توميزغي)",
     womensHealth: "صحة المرأة",
     loadMore: "عرض المزيد",
+    all: "الكل",
     noResults: "لم يتم العثور على منتجات.",
+  },
+  home: {
+    browseCategories: "تصفح حسب الفئة",
+    categoriesHint: "اعثر على البروبيوتيك المناسب لاحتياجاتك",
+    productCount: "{{count}} منتج",
+    trustTitle: "معايير الجودة الدولية",
+    certVerified: "معتمد",
+    ctaTitle: "هل تحتاج مساعدة في اختيار المنتج؟",
+    ctaSubtitle:
+      "تصفح كتالوجنا الكامل أو تواصل معنا — سيساعدك فريقنا في العثور على البروبيوتيك المناسب.",
+    productsTitle: "مجموعة البروبيوتيك لدينا",
+    productsSubtitle:
+      "مكملات بروبيوتيك لدعم الميكروبيوم اليومي وصحة الأطفال والاحتياجات المتخصصة.",
+    statSince: "تأسست",
+    statFormulas: "صيغ فريدة",
+    statExport: "تصدير أمريكي",
+    statQuality: "معيار سلامة الغذاء",
+    statYears: "سنوات خبرة في البروبيوتيك",
   },
   why: {
     title: "لماذا MEGA PHARM SERVICE؟",
@@ -170,7 +189,6 @@ export const ar = {
     goToSlide: "الانتقال إلى الشريحة {{n}}",
   },
   common: {
-    getDiscount: "احصل على خصم 10٪",
     learnMore: "اعرف المزيد",
     shopAll: "جميع المنتجات",
     showMore: "المزيد",
@@ -182,8 +200,7 @@ export const ar = {
   contact: {
     pageSubtitle: "يسعدنا تواصلك معنا.",
     getInTouch: "تواصل معنا",
-    address:
-      "أوزبكستان، طشقند، منطقة يونس آباد، شارع خوتيرا 1",
+    address: "أوزبكستان، طشقند، منطقة يونس آباد، شارع خوتيرا 1",
     sendMessage: "إرسال رسالة",
     thankYou: "شكرًا لك. سنعود إليك قريبًا.",
     yourName: "الاسم",
@@ -192,8 +209,7 @@ export const ar = {
   },
   chat: {
     title: "دعم الدردشة",
-    intro:
-      "أرسل لنا رسالة وسنرد في أقرب وقت ممكن.",
+    intro: "أرسل لنا رسالة وسنرد في أقرب وقت ممكن.",
     emailPlaceholder: "you@example.com",
     messagePlaceholder: "كيف يمكننا مساعدتك؟",
     send: "إرسال الرسالة",
@@ -255,8 +271,7 @@ export const ar = {
     certificatesIntro:
       "شهادات رسمية للشركة. يمكنك المعاينة هنا أو فتح كل ملف PDF في تبويب جديد.",
     patentsPageTitle: "براءات الاختراع وشهادات التسجيل",
-    patentsIntro:
-      "براءات الاختراع ووثائق التسجيل الحكومية لمنتجاتنا.",
+    patentsIntro: "براءات الاختراع ووثائق التسجيل الحكومية لمنتجاتنا.",
     openPdfNewTab: "فتح في تبويب جديد",
     downloadPdf: "تنزيل",
     selectDocument: "اختر مستندًا",

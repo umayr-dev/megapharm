@@ -205,4 +205,3 @@ export const PRODUCT_DETAILS: Record<Product["nameKey"], ProductExtraInfo> = {
     cfu: "The number of viable lactobacilli, KOE/g not less than 1×10^9",
   },
 };
-

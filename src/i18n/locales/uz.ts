@@ -131,7 +131,26 @@ export const uz = {
     starter: "Zakvaska-tomizgi",
     womensHealth: "Ayollar salomatligi",
     loadMore: "Yana ko‘rsatish",
+    all: "Barchasi",
     noResults: "Mahsulot topilmadi.",
+  },
+  home: {
+    browseCategories: "Kategoriya bo'yicha ko'rish",
+    categoriesHint: "Ehtiyojingizga mos probiotikni toping",
+    productCount: "{{count}} ta mahsulot",
+    trustTitle: "Xalqaro sifat standartlari",
+    certVerified: "Sertifikatlangan",
+    ctaTitle: "Mahsulot tanlashda yordam kerakmi?",
+    ctaSubtitle:
+      "To'liq katalogni ko'ring yoki biz bilan bog'laning — mutaxassislarimiz mos probiotikni topishga yordam beradi.",
+    productsTitle: "Bizning probiotiklar assortimenti",
+    productsSubtitle:
+      "Kundalik mikroflora, bolalar salomatligi va maxsus ehtiyojlar uchun probiotik qo'shimchalar.",
+    statSince: "Tashkil etilgan",
+    statFormulas: "Noyob formula",
+    statExport: "AQSh eksporti",
+    statQuality: "Oziq-ovqat xavfsizligi",
+    statYears: "yillik probiotik tajribasi",
   },
   why: {
     title: "Nima uchun MEGA PHARM SERVICE?",
@@ -175,7 +194,6 @@ export const uz = {
     goToSlide: "{{n}}-slaydga o'tish",
   },
   common: {
-    getDiscount: "10% chegirma oling",
     learnMore: "Batafsil",
     shopAll: "Barcha mahsulotlar",
     showMore: "Yana",
@@ -187,8 +205,7 @@ export const uz = {
   contact: {
     pageSubtitle: "Sizdan xabar kutamiz.",
     getInTouch: "Bog'lanish",
-    address:
-      "O'zbekiston, Toshkent, Yunusobod tumani, Hotira ko'chasi, 1",
+    address: "O'zbekiston, Toshkent, Yunusobod tumani, Hotira ko'chasi, 1",
     sendMessage: "Xabar yuborish",
     thankYou: "Rahmat. Tez orada siz bilan bog'lanamiz.",
     yourName: "Ism",
@@ -197,8 +214,7 @@ export const uz = {
   },
   chat: {
     title: "Qo'llab-quvvatlash chati",
-    intro:
-      "Xabar yozing — imkon qadar tezroq javob beramiz.",
+    intro: "Xabar yozing — imkon qadar tezroq javob beramiz.",
     emailPlaceholder: "you@example.com",
     messagePlaceholder: "Qanday yordam kerak?",
     send: "Xabarni yuborish",

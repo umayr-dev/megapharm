@@ -130,3 +130,6 @@ export const MOCK_PRODUCTS: Product[] = PRODUCT_IMAGES.map((img, i) => ({
   image: `/${img}`,
   imageThumb: `/product-thumbs/${img}`,
 }));
+
+/** Home katalog qatorida ko‘rsatiladigan mahsulotlar (birinchi 6 ta) */
+export const HOME_CATALOG_COUNT = 6;
